@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="../babel.js"></script>
+    <script>
+      (function () {
+
+        var base64Data = 'iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==';
+        var contentType = 'image/png';
+
+        var testFile = jsTypeConvert.base64ToFile(base64Data, {
+          contentType,
+          fileName: 'biu'
+        });
+
+        var reader = new FileReader();
+        reader.readAsDataURL(testFile);
+        reader.onload = function () {
+          if (reader.result === "data:" + contentType + ";base64," + base64Data) {
+            document.write('<h1 id="answer">okay</h1>');
+          } else {
+            console.log(reader.result);
+            document.write('<h1 id="answer">nope</h1>');
+          }
+        };
+        
+      }())
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

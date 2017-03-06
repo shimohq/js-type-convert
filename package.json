@@ -1,0 +1,31 @@
+{
+  "name": "js-type-convert",
+  "version": "1.0.0",
+  "description": "convert js many types without stackoverflow!",
+  "main": "babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -o babel.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimohq/js-type-convert.git"
+  },
+  "keywords": [
+    "js",
+    "type"
+  ],
+  "author": "https://github.com/fghpdf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shimohq/js-type-convert/issues"
+  },
+  "homepage": "https://github.com/shimohq/js-type-convert#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.2.0"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "nightmare": "^2.10.0"
+  }
+}
